@@ -1,31 +1,25 @@
-<!--style: CSS
-button{ -- CSS Selector = which elements we're targeting
-    CSS Property : CSS value;
+<!--
+    PSEUDO CLASS: adds extra styles when doing an action like hover
+    class:pseudo-class{
 
-    color: text color : can hover the colored box to access FULL RGB color palette
+    }
+        active: button when clicked
+            opacity : value between 0-1
+        
+    TRANSITION
+        transition: <what property we want to transition> <how long>;
+        transition: opacity 0.15s;
 
-    border-radius : rounded corner
-    cursor: pointer -- when hover: pointer change to hand
+        can have multiple attribute transition too
 
-    border-style: solid -- solid color on border: there's gradient
-    space(around an element) = margin
-} 
-
-in CSS many trial and error to get measurement right, no need to know
-how big 50px is
-
-How am i supposed to memorize these properties?
--- Search CSS <....> ie CSS rounded corners
-
-HTML attribute
-class="" allow us to label HTML elements
--- When use button{} and no label -- it will apply the style to all buttons
--- In <style>, target a class with .<class name>
-
-
-GENERAL TECHNIQUE:
-1. Create element with HTML
-2. Style with CSS one-by-one
+        common pitfall: do not put transition in hover, 
+                        because if we unhover then there's
+                        transition - put in main button class
+    
+    SHADOWS
+        box-shadows: <horizontal shift> <vertical shift> <blur> <color>
+                    10px 10px 10px black
+                RGBA : A is opacity of that color
 -->
 <style>
     .subscribe-button{
@@ -37,6 +31,14 @@ GENERAL TECHNIQUE:
         border-radius: 5px;
         cursor: pointer;
         margin-right: 8px;
+
+        transition: opacity 0.15s;
+    }
+    .subscribe-button:hover{
+        opacity: 0.8;
+    }
+    .subscribe-button:active{
+        opacity: 0.5;
     }
     .join-button{
         background-color: white;
@@ -49,7 +51,19 @@ GENERAL TECHNIQUE:
         width: 62px;
         cursor: pointer;
         margin-right: 8px;
+
+        transition: 
+            background-color 0.1s,
+            color 0.1s;
     }
+    .join-button:hover{
+        background-color: rgb(117, 117, 253) ;
+        color: white;
+    }
+    .join-button:active{
+        opacity: 0.8;
+    }
+
     .tweet-button{
         background-color: rgb(74, 106, 247);
         color:white;
@@ -61,6 +75,10 @@ GENERAL TECHNIQUE:
         font-weight: bold;
         font-size: 15px;
         margin-right: 8px;
+        transition: box-shadow 0.2s;
+    }
+    .tweet-button:hover{
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
     }
     .create-pull-request-button{
         background-color: rgb(35, 168, 46);
@@ -72,6 +90,18 @@ GENERAL TECHNIQUE:
         cursor: pointer;
         font-family: sans-serif;
         font-weight: bold;
+        
+        transition: 
+            opacity 0.15s,
+            box-shadow 0.2s;
+    }
+    .create-pull-request-button:hover{
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        opacity: 0.8;
+    }
+    .create-pull-request-button:active{
+        opacity: 1;
+
     }
 </style>
 
