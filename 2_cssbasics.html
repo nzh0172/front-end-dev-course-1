@@ -1,0 +1,92 @@
+<!--style: CSS
+button{ -- CSS Selector = which elements we're targeting
+    CSS Property : CSS value;
+
+    color: text color : can hover the colored box to access FULL RGB color palette
+
+    border-radius : rounded corner
+    cursor: pointer -- when hover: pointer change to hand
+
+    border-style: solid -- solid color on border: there's gradient
+    space(around an element) = margin
+} 
+
+in CSS many trial and error to get measurement right, no need to know
+how big 50px is
+
+How am i supposed to memorize these properties?
+-- Search CSS <....> ie CSS rounded corners
+
+HTML attribute
+class="" allow us to label HTML elements
+-- When use button{} and no label -- it will apply the style to all buttons
+-- In <style>, target a class with .<class name>
+
+
+GENERAL TECHNIQUE:
+1. Create element with HTML
+2. Style with CSS one-by-one
+-->
+<style>
+    .subscribe-button{
+        background-color: rgb(200, 15, 15);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 105px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 8px;
+    }
+    .join-button{
+        background-color: white;
+        color: rgb(117, 117, 253);
+        border-color: rgb(117, 117, 253);
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 1px;
+        height: 36px;
+        width: 62px;
+        cursor: pointer;
+        margin-right: 8px;
+    }
+    .tweet-button{
+        background-color: rgb(74, 106, 247);
+        color:white;
+        border: none;
+        height: 36px;
+        width: 80px;
+        border-radius: 100px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 15px;
+        margin-right: 8px;
+    }
+    .create-pull-request-button{
+        background-color: rgb(35, 168, 46);
+        color:whitesmoke;
+        border: none;
+        height: 35px;
+        width: 180px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+</style>
+
+<button class="subscribe-button">
+    SUBSCRIBE
+</button>
+
+<button class="join-button">
+    JOIN
+</button>
+
+<button class="tweet-button">
+    Tweet
+</button>
+
+<button class="create-pull-request-button">
+    Create pull request
+</button>
