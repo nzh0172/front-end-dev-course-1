@@ -1,36 +1,46 @@
 <!--
-    PSEUDO CLASS: adds extra styles when doing an action like hover
-    class:pseudo-class{
+    CSS BOX MODEL
+        *DONT USE HEIGHT AND WIDTH* as the style will not adapt to the text
+        and squish the text
+        USE margin, border and padding instead
 
-    }
-        active: button when clicked
-            opacity : value between 0-1
+        INSPECT > COMPUTED to see the box model
+        - margin : space between elements
+        - padding: space between border and TEXT
         
-    TRANSITION
-        transition: <what property we want to transition> <how long>;
-        transition: opacity 0.15s;
+        if an element has border and not the same size as another
+        element: adjust padding as border has its own size too
+        ie : padding A = 10px, border B = 1px -> padding B = 9px
+        --SEE subscribe and join button
 
-        can have multiple attribute transition too
+        USE box model for helping measurement
 
-        common pitfall: do not put transition in hover, 
-                        because if we unhover then there's
-                        transition - put in main button class
-    
-    SHADOWS
-        box-shadows: <horizontal shift> <vertical shift> <blur> <color>
-                    10px 10px 10px black
-                RGBA : A is opacity of that color
+        text aligned but style is not aligned: as default behaviour
+        of browser is to align to text -- as browser originally is text-based
+            USE vertical-align: top
+
+
+    DEV TOOLS
+        INSPECT > STYLES: for more accurate color instead of
+                            eyeballing color like prev
+
 -->
 <style>
     .subscribe-button{
         background-color: rgb(200, 15, 15);
         color: white;
         border: none;
-        height: 36px;
-        width: 105px;
         border-radius: 5px;
         cursor: pointer;
+
         margin-right: 8px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
 
         transition: opacity 0.15s;
     }
@@ -47,10 +57,16 @@
         border-radius: 5px;
         border-style: solid;
         border-width: 1px;
-        height: 36px;
-        width: 62px;
         cursor: pointer;
+
         margin-right: 8px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 16px;
+        padding-right: 16px;
 
         transition: 
             background-color 0.1s,
@@ -65,17 +81,23 @@
     }
 
     .tweet-button{
-        background-color: rgb(74, 106, 247);
+        background-color: rgb(26, 140, 216);
         color:white;
         border: none;
-        height: 36px;
-        width: 80px;
         border-radius: 100px;
         cursor: pointer;
         font-weight: bold;
         font-size: 15px;
-        margin-right: 8px;
+
         transition: box-shadow 0.2s;
+
+        margin-right: 8px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .tweet-button:hover{
         box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
@@ -84,12 +106,20 @@
         background-color: rgb(35, 168, 46);
         color:whitesmoke;
         border: none;
-        height: 35px;
-        width: 180px;
+
         border-radius: 6px;
         cursor: pointer;
         font-family: sans-serif;
         font-weight: bold;
+
+        margin-right: 8px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
         
         transition: 
             opacity 0.15s,
@@ -110,7 +140,7 @@
 </button>
 
 <button class="join-button">
-    JOIN
+    JOIN MY CHANNEL
 </button>
 
 <button class="tweet-button">
