@@ -1,0 +1,67 @@
+<!--
+    padding: top right bottom left OF ABOX
+
+-->
+
+<style>
+    .stretch{
+        background-color: green;
+        color: whitesmoke;
+        border: none;
+
+        font-size: large;
+        cursor: pointer;
+
+        padding: 10 30;
+        margin: 5;
+
+        transition:
+            padding 0.5s;
+
+        vertical-align: top;
+        
+    }
+    .stretch:hover{
+        padding: 20 50;
+    }
+
+    .margin-padding{
+        background-color: green;
+        color: whitesmoke;
+        border: none;
+        
+        position: 10 10;
+
+        font-size: large;
+        cursor: pointer;
+
+        padding: 10 30;
+        margin: 5;
+        
+        transition:
+            padding 0.5s,
+            margin 0.3s;
+
+        vertical-align: top;
+
+    }
+    .margin-padding:hover{
+        padding: 10 35 10 35;
+        margin: 5 10 5 15;
+
+    }
+</style>
+
+
+<button class="stretch">
+    Stretch
+</button>
+
+<button class="margin-padding">
+    One
+</button>
+
+<button class="margin-padding">
+    Two
+</button>
+
