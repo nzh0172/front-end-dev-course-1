@@ -1,152 +1,43 @@
 <!--
-    CSS BOX MODEL
-        *DONT USE HEIGHT AND WIDTH* as the style will not adapt to the text
-        and squish the text
-        USE margin, border and padding instead
+    6. IMPLEMENTATION WITH LIVE SERVER AND HTML STRUCTURE
+    - style doesnt create anything visible, it just modify the
+    visible stuff -> style belongs to head
+    <link rel = " " href = "css location">
 
-        INSPECT > COMPUTED to see the box model
-        - margin : space between elements
-        - padding: space between border and TEXT
-        
-        if an element has border and not the same size as another
-        element: adjust padding as border has its own size too
-        ie : padding A = 10px, border B = 1px -> padding B = 9px
-        --SEE subscribe and join button
+    -style code is implemented in a separate CSS file
+    REFER 6_cssbasics.css
+    
+    VOID ELEMENTS - tags that dont have closing tags like <link>
+    closing tags like </this>
 
-        USE box model for helping measurement
-
-        text aligned but style is not aligned: as default behaviour
-        of browser is to align to text -- as browser originally is text-based
-            USE vertical-align: top
-
-
-    DEV TOOLS
-        INSPECT > STYLES: for more accurate color instead of
-                            eyeballing color like prev
+    <href> hypertext reference: it finds the file in the project folder
+        that contains that html file - if in separate folder: can't find
+        use "foldername/file"
 
 -->
-<style>
-    .subscribe-button{
-        background-color: rgb(200, 15, 15);
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
 
-        margin-right: 8px;
-        margin-bottom: 8px;
-        margin-top: 8px;
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 16px;
-        padding-right: 16px;
-
-        transition: opacity 0.15s;
-    }
-    .subscribe-button:hover{
-        opacity: 0.8;
-    }
-    .subscribe-button:active{
-        opacity: 0.5;
-    }
-    .join-button{
-        background-color: white;
-        color: rgb(117, 117, 253);
-        border-color: rgb(117, 117, 253);
-        border-radius: 5px;
-        border-style: solid;
-        border-width: 1px;
-        cursor: pointer;
-
-        margin-right: 8px;
-        margin-bottom: 8px;
-        margin-top: 8px;
-
-        padding-top: 9px;
-        padding-bottom: 9px;
-        padding-left: 16px;
-        padding-right: 16px;
-
-        transition: 
-            background-color 0.1s,
-            color 0.1s;
-    }
-    .join-button:hover{
-        background-color: rgb(117, 117, 253) ;
-        color: white;
-    }
-    .join-button:active{
-        opacity: 0.8;
-    }
-
-    .tweet-button{
-        background-color: rgb(26, 140, 216);
-        color:white;
-        border: none;
-        border-radius: 100px;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 15px;
-
-        transition: box-shadow 0.2s;
-
-        margin-right: 8px;
-        margin-bottom: 8px;
-        margin-top: 8px;
-        padding-top: 9px;
-        padding-bottom: 9px;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    .tweet-button:hover{
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    }
-    .create-pull-request-button{
-        background-color: rgb(35, 168, 46);
-        color:whitesmoke;
-        border: none;
-
-        border-radius: 6px;
-        cursor: pointer;
-        font-family: sans-serif;
-        font-weight: bold;
-
-        margin-right: 8px;
-        margin-bottom: 8px;
-        margin-top: 8px;
-
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
+<!DOCTYPE html>
+<html>  
+    <head>
+        <link rel ="stylesheet" href="styles/6_cssbasics.css">
+    </head>
+    <body>
+        <button class="subscribe-button">
+            SUBSCRIBE
+        </button>
         
-        transition: 
-            opacity 0.15s,
-            box-shadow 0.2s;
-    }
-    .create-pull-request-button:hover{
-        box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
-        opacity: 0.8;
-    }
-    .create-pull-request-button:active{
-        opacity: 1;
+        <button class="join-button">
+            JOIN MY CHANNEL
+        </button>
+        
+        <button class="tweet-button">
+            Tweet
+        </button>
+        
+        <button class="create-pull-request-button">
+            Create pull request
+        </button>
+    </body>
+</html>
 
-    }
-</style>
 
-<button class="subscribe-button">
-    SUBSCRIBE
-</button>
-
-<button class="join-button">
-    JOIN MY CHANNEL
-</button>
-
-<button class="tweet-button">
-    Tweet
-</button>
-
-<button class="create-pull-request-button">
-    Create pull request
-</button>
