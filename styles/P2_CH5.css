@@ -1,0 +1,33 @@
+.header{
+    font-family: arial;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.description{
+    font-family: arial;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.learn{
+    font-family: arial;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    color: rgb(114, 51, 172);
+    cursor: pointer;
+    
+    border-radius: 10px;
+    text-decoration: none;
+
+    transition: text-decoration 2s;
+}
+.learn:hover{
+    text-decoration: underline;
+}
