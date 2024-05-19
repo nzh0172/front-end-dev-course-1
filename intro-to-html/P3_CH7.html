@@ -1,0 +1,58 @@
+<!--
+7. PRactice with images and text boxes
+    object-fit
+    object-position
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .sample{
+                width: 70px;
+                height: 70px;
+                border-radius: 100px;
+                object-fit: cover;
+                vertical-align: middle;
+            }
+            .tweet{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-left: 10px;
+                width: 500px;
+                height: 50px;
+                font-size: 20px;
+                border: none;
+                vertical-align: middle;
+                outline: none;
+            }
+
+            .tweet-button{
+                font-family: 'Segoe UI';
+                font-size: 15px;
+                font-weight: bold;
+                color: white;
+                border-radius: 30px;
+                border: none;
+                padding: 10px 20px 10px 20px;
+                cursor: pointer;
+                background-color: rgba(29, 155, 240, 1);
+                transition: background-color 0.3s;
+                vertical-align: middle;
+            }
+            .tweet-button:hover{
+                background-color: rgba(29, 155, 240, 0.7);
+            }
+            .tweet-button:active{
+                background-color: rgba(29, 155, 240, 1);
+            }
+
+        </style>
+    </head>
+    <body>
+        <img class="sample" src="img/sample-1.webp">
+        <input class ="tweet" type ="text" placeholder="What's happening?">
+        <button class ="tweet-button">
+            Tweet
+        </button>
+    </body>
+</html>
