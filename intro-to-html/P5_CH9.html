@@ -1,27 +1,115 @@
+<!--i have to contain the text in the box by
+setting the width of the larger box so that it
+will not change size when text too long-->
+
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <style>
-            .logo{
-                width: 300px;
-                margin-top: 200px;
-                padding-left: 180px;
+            
+            p{
+                margin-top:0px;
+                margin-bottom:0px;
+                font-family: 'Roboto', Arial;
             }
-            .search-bar{
-                display: block;
-                margin-top: 20px;
-                margin-left: 130px;
-                padding: 20px 100px 20px 100px;
-                border-radius: 30px;
-                border-style: none;
-                box-shadow: 0px 0px 5px;
-                outline: none;
-                width: 200px;
-                
+            .cat-box{
+                display: inline-block;
+                box-shadow: 0px 0px 7px;
+                border-radius: 7px;
+                margin-left: 20px;
+                margin-right: 10px;
+                margin-top: 30px;
+                width: 230px;
+                vertical-align: top;
             }
+            .thumbnail-img{
+                width: 230px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 7px;
+            }
+            .mutual-img{
+                width: 25px;
+                height: 25px;
+                object-fit: cover;
+                border-radius: 100px;
+            }
+            .mutual{
+                margin-top:5px;
+                margin-bottom:5px;
+            }
+            .mutual-p{
+                display: inline-block;
+                margin-left: 6px;
+                font-size: 14px;
+                vertical-align:super;
+            }
+            .add-button{
+                padding: 10px 20px 10px 20px;
+                border: none;
+                background-color: rgb(81, 81, 207);
+                border-radius: 5px;
+                color:antiquewhite;
+            }
+            .info{
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-bottom: 20px;
+            }
+            .name-p{
+                font-weight: bold;
+                font-size: large;
+                display: inline-block;
+            }
+            .add-button{
+                cursor: pointer;
+            }
+            
+
         </style>
     </head>
     <body>
-        
+        <div class = "cat-box">
+            <div class = "thumbnail">
+                <img class = "thumbnail-img" src ="img/cat-1.webp">
+            </div>
+            <div class = "info">
+                <p class = "name-p">Beluga Cat</p>
+                <div class = "mutual">
+                    <img class = "mutual-img" src = "img/sample-1.webp">
+                    <p class = "mutual-p">2 mutual friends</p>
+                </div>
+                <button class = "add-button">Add Friend</button>
+            </div>
+        </div>
+        <div class = "cat-box">
+            <div class = "thumbnail">
+                <img class = "thumbnail-img" src ="img/cat-2.jpg">
+            </div>
+            <div class = "info">
+                <p class = "name-p">Pop Cat</p>
+                <div class = "mutual">
+                    <img class = "mutual-img" src = "img/sample-1.webp">
+                    <p class = "mutual-p">3 mutual friends</p>
+                </div>
+                <button class = "add-button">Add Friend</button>
+            </div>
+        </div>
+        <div class = "cat-box">
+            <div class = "thumbnail">
+                <img class = "thumbnail-img" src ="img/cat-3.webp">
+            </div>
+            <div class = "info">
+                <p class = "name-p">Thousand Yard Stare Cat</p>
+                <div class = "mutual">
+                    <img class = "mutual-img" src = "img/sample-1.webp">
+                    <p class = "mutual-p">3 mutual friends</p>
+                </div>
+                <button class = "add-button">Add Friend</button>
+            </div>
+        </div>
     </body>
 </html>
