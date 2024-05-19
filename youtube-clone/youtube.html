@@ -12,7 +12,18 @@ object-position:
 <input> is void element
 placeholder = text dissapere when clicked
 
-8.
+8. CSS DISPLAY PROPERTY
+    TYPES OF ELEMENT
+    1. BLOCK ELEMENT = takes up the entire line (ie paragraph)
+    2. INLINE-BLOCK ELEMENT = only takes up as much space
+                                as they need to (ie textbox and img)
+    -------
+    3. INLINE ELEMENT =  appear within a line of text (ie <strong>)
+
+    Switching from block to inline-block - display:
+
+    can group multiple selectors .video-author, .video-stats
+
 -->
 <!DOCTYPE html>
 <html>
@@ -21,6 +32,7 @@ placeholder = text dissapere when clicked
         <style>
             .thumbnail{
                 width: 300px;
+                display: block;
             }
             .search-bar{
                 font-size: 20px;
@@ -31,11 +43,24 @@ placeholder = text dissapere when clicked
                 border-radius: 20px;
                 border-style: none;
                 box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+                display: block;
+                outline: none;
+            }
+            .video-author, .video-stats{
+                display: inline;
             }
         </style>
     </head>
     <body>
+        <input class ="search-bar" type = "text" placeholder="Search">
          <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
-         <input class ="search-bar" type = "text" placeholder="Search">
+         
+         <p class ="video-author">
+            Marques Brownloee
+         </p>
+         <p class = 'video-stats'>
+            3.4M views - 6 months ago
+         </p>
+         
     </body>
 </html>

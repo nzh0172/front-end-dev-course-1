@@ -1,3 +1,4 @@
+
 .stretch{
     background-color: green;
     color: whitesmoke;
@@ -17,7 +18,7 @@
     transition:
         padding 0.5s;
 
-    vertical-align: top;
+    display: block;
     
 }
 .stretch:hover{
