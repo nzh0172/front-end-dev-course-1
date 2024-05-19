@@ -24,15 +24,26 @@ placeholder = text dissapere when clicked
 
     can group multiple selectors .video-author, .video-stats
 
+
+9. <div> = IS A BLOCK ELEMENT = IS LIKE A CONTAINER GROUP THINGS
+    <divs> can contain other elements
+
+10. NESTED LAYOUT TECHNIQUES
+Designs can be broken down to horizontal and vertical layout
 -->
 <!DOCTYPE html>
 <html>
     <head>
         <title>Youtube Clone</title>
         <style>
+            p{
+                font-family: sans-serif;
+            }
             .thumbnail{
                 width: 300px;
                 display: block;
+                margin-bottom: 20px;
+                margin-top: 20px;
             }
             .search-bar{
                 font-size: 20px;
@@ -46,21 +57,42 @@ placeholder = text dissapere when clicked
                 display: block;
                 outline: none;
             }
-            .video-author, .video-stats{
-                display: inline;
+
+            .video-preview{
+                width: 300px;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 15px;
+                
             }
         </style>
     </head>
     <body>
         <input class ="search-bar" type = "text" placeholder="Search">
-         <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
-         
-         <p class ="video-author">
-            Marques Brownloee
-         </p>
-         <p class = 'video-stats'>
-            3.4M views - 6 months ago
-         </p>
-         
+         <div class="video-preview">
+            <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
+            <p class = "video-title">
+                Talking Tech and AI with Google CEO Sundar Pichai!
+            </p>
+            <p class ="video-author">
+               Marques Brownloee
+            </p>
+            <p class = 'video-stats'>
+               3.4M views &#183; 6 months ago
+            </p>
+         </div>
+
+         <div class="video-preview">
+            <img class ="thumbnail" src= "thumbnail/thumbnail-2.webp">
+            <p class = "video-title">
+                Try Not To Laugh #2
+            </p>
+            <p class ="video-author">
+               Markiplier
+            </p>
+            <p class = 'video-stats'>
+               3.4M views &#183; 6 months ago
+            </p>
+         </div>
     </body>
 </html>

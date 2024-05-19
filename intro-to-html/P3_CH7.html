@@ -2,6 +2,8 @@
 7. PRactice with images and text boxes
     object-fit
     object-position
+
+9. IMPLEMENTED <DIV>
 -->
 
 <!DOCTYPE html>
@@ -45,14 +47,24 @@
             .tweet-button:active{
                 background-color: rgba(29, 155, 240, 1);
             }
+            .tweet-div{
+                box-shadow: 0px 0px 10px;
+                border-radius: 10px;
+                padding: 10px 20px 10px 20px;
+                display: inline-block;
+            }
 
         </style>
     </head>
     <body>
-        <img class="sample" src="img/sample-1.webp">
-        <input class ="tweet" type ="text" placeholder="What's happening?">
-        <button class ="tweet-button">
-            Tweet
-        </button>
+        <div class = "tweet-div">
+            <img class="sample" src="img/sample-1.webp">
+            <input class ="tweet" type ="text" placeholder="What's happening?">
+            <button class ="tweet-button">
+                Tweet
+            </button>
+        </div>
+
+
     </body>
 </html>
