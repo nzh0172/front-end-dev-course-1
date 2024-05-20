@@ -1,0 +1,72 @@
+<!--
+third way of using css: in div in body : but not used in real world website
+grid-template-columns: 100px 100px; - number of values determine number of columns
+if there are more columns in a row it will wrap
+
+fr = free value: column will take the remaining space and fill it - this will remove uneven vertical alignment
+1fr 2fr: ratio size 1:2
+
+1fr 1fr 1fr : when windows resized the box also resize
+
+column-gap and row-gap
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body style="padding-bottom: 1000px;">
+       <div style="
+            display: grid;
+            grid-template-columns: 100px 100px;
+        ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">div 2<p>test</p></div>
+       </div>
+       <div style="
+            margin-top: 5px;
+            display: grid;
+            grid-template-columns: 100px 100px;
+        ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">div 2<p>test</p></div>
+        </div>
+        <div style="
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 100px 100px 200px;
+        ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">div 2<p>test</p></div>
+            <div style="background-color: lightpink;">div 2<p>test</p></div>
+            <div style="background-color: lightpink;">div 2<p>test</p></div>
+        </div>
+        <div style="
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 100px 1fr 2fr;
+        ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">1fr</div>
+            <div style="background-color: lightskyblue;">2fr</div>
+            <div style="background-color: lightyellow;">adf</div>
+        </div>
+
+        <div style="
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            height: 400px;
+            column-gap: 20px;
+            row-gap: 10px;
+        ">
+            <div style="background-color: lightblue;">1ft</div>
+            <div style="background-color: lightpink;">1fr</div>
+            <div style="background-color: lightskyblue;">1fr</div>
+            <div style="background-color: lightyellow;">1fr</div>
+            <div style="background-color: lightblue;">1ft</div>
+            <div style="background-color: lightpink;">1fr</div>
+        </div>
+    </body>
+</html>

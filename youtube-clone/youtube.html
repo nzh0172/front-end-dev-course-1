@@ -32,6 +32,16 @@ placeholder = text dissapere when clicked
 Designs can be broken down to horizontal and vertical layout with multiple <div>
 
 Paragraph by default has its own margin - set margin to 0 at p
+
+
+11. CSS GRID
+<div class = "grid">
+    thing we want to make it grid
+</div>
+
+remove width setting - instead use width:100%, make picture fit inside container
+    -dont need display:block and margin and vertical-align
+    -were going to use row-gap and column-gap instead of margin
 -->
 <!DOCTYPE html>
 <html>
@@ -47,10 +57,7 @@ Paragraph by default has its own margin - set margin to 0 at p
                 margin-bottom:0;
             }
             .thumbnail{
-                width: 300px;
-                display: block;
-                margin-bottom: 20px;
-                margin-top: 20px;
+                width: 100%;
             }
             .search-bar{
                 font-size: 20px;
@@ -66,10 +73,8 @@ Paragraph by default has its own margin - set margin to 0 at p
             }
 
             .video-preview{
-                width: 300px;
-                display: inline-block;
-                vertical-align: top;
-                margin-right: 15px;
+                width: 100%;
+
             }
             .channel-pic{
                 display: inline-block;
@@ -82,9 +87,14 @@ Paragraph by default has its own margin - set margin to 0 at p
                 width: 200px;
                 vertical-align: top;
             }
+            .video-info-grid{
+                display: grid;
+                grid-template-columns: 50px 1fr;
+            }
             .youtuber{
                 width: 100%;
                 border-radius: 100px;
+                display: inline-block;
             }
             .video-title{
                 margin-top:0px;
@@ -104,42 +114,157 @@ Paragraph by default has its own margin - set margin to 0 at p
             .thumbnail{
                 margin-bottom: 12px;
             }
+            .video-grid{
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 15px;
+                row-gap: 14px;
+            }
         </style>
     </head>
     <body>
         <input class ="search-bar" type = "text" placeholder="Search">
-         <div class="video-preview">
-            <div class = "thumbnail-row">
-                <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
+        
+        <div class ="video-grid">
+            <div class="video-preview">
+                <div class = "thumbnail-row">
+                    <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
+                </div>
+                <div class = "video-info-grid">
+                    <div class = "channel-pic">
+                        <img class = "youtuber" src="youtuber-icon/channel-1.webp">
+                    </div>
+                    <div class="video-info">
+                        <p class = "video-title">
+                            Talking Tech and AI with Google CEO Sundar Pichai! adfafasdfafasdf
+                        </p>
+                        <p class ="video-author">
+                           Marques Brownloee
+                        </p>
+                        <p class = 'video-stats'>
+                           3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class = "channel-pic">
-                <img class = "youtuber" src="youtuber-icon/channel-1.webp">
+    
+             <div class="video-preview">
+                <div class = "thumbnail-row">
+                    <img class ="thumbnail" src= "thumbnail/thumbnail-2.webp">
+                </div>
+                <div class = "video-info-grid">
+                    <div class = "channel-pic">
+                        <img class = "youtuber" src="youtuber-icon/channel-2.webp">
+                    </div>
+                    <div class="video-info">
+                        <p class = "video-title">
+                            Try Not To Laugh #2
+                        </p>
+                        <p class ="video-author">
+                            Markiplier
+                        </p>
+                        <p class = 'video-stats'>
+                           3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+                </div>
+             </div>
+            
+             <div class="video-preview">
+                <div class = "thumbnail-row">
+                    <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
+                </div>
+                <div class = "video-info-grid">
+                    <div class = "channel-pic">
+                        <img class = "youtuber" src="youtuber-icon/channel-1.webp">
+                    </div>
+                    <div class="video-info">
+                        <p class = "video-title">
+                            Talking Tech and AI with Google CEO Sundar Pichai! adfafasdfafasdf
+                        </p>
+                        <p class ="video-author">
+                           Marques Brownloee
+                        </p>
+                        <p class = 'video-stats'>
+                           3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="video-info">
-                <p class = "video-title">
-                    Talking Tech and AI with Google CEO Sundar Pichai! adfafasdfafasdf
-                </p>
-                <p class ="video-author">
-                   Marques Brownloee
-                </p>
-                <p class = 'video-stats'>
-                   3.4M views &#183; 6 months ago
-                </p>
-            </div>
+    
+             <div class="video-preview">
+                <div class = "thumbnail-row">
+                    <img class ="thumbnail" src= "thumbnail/thumbnail-2.webp">
+                </div>
+                <div class = "video-info-grid">
+                    <div class = "channel-pic">
+                        <img class = "youtuber" src="youtuber-icon/channel-2.webp">
+                    </div>
+                    <div class="video-info">
+                        <p class = "video-title">
+                            Try Not To Laugh #2
+                        </p>
+                        <p class ="video-author">
+                            Markiplier
+                        </p>
+                        <p class = 'video-stats'>
+                           3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+                </div>
+             </div>
 
-         </div>
+             <div class="video-preview">
+                <div class = "thumbnail-row">
+                    <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
+                </div>
+                <div class = "video-info-grid">
+                    <div class = "channel-pic">
+                        <img class = "youtuber" src="youtuber-icon/channel-1.webp">
+                    </div>
+                    <div class="video-info">
+                        <p class = "video-title">
+                            Talking Tech and AI with Google CEO Sundar Pichai! adfafasdfafasdf
+                        </p>
+                        <p class ="video-author">
+                           Marques Brownloee
+                        </p>
+                        <p class = 'video-stats'>
+                           3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+             <div class="video-preview">
+                <div class = "thumbnail-row">
+                    <img class ="thumbnail" src= "thumbnail/thumbnail-2.webp">
+                </div>
+                <div class = "video-info-grid">
+                    <div class = "channel-pic">
+                        <img class = "youtuber" src="youtuber-icon/channel-2.webp">
+                    </div>
+                    <div class="video-info">
+                        <p class = "video-title">
+                            Try Not To Laugh #2
+                        </p>
+                        <p class ="video-author">
+                            Markiplier
+                        </p>
+                        <p class = 'video-stats'>
+                           3.4M views &#183; 6 months ago
+                        </p>
+                    </div>
+                </div>
+             </div>
 
-         <div class="video-preview">
-            <img class ="thumbnail" src= "thumbnail/thumbnail-2.webp">
-            <p class = "video-title">
-                Try Not To Laugh #2
-            </p>
-            <p class ="video-author">
-               Markiplier
-            </p>
-            <p class = 'video-stats'>
-               3.4M views &#183; 6 months ago
-            </p>
-         </div>
+             
+
+        </div>
+
+
+        
+
+
     </body>
 </html>

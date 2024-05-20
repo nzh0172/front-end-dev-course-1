@@ -42,10 +42,10 @@ will not change size when text too long-->
                 margin-bottom:5px;
             }
             .mutual-p{
-                display: inline-block;
                 margin-left: 6px;
                 font-size: 14px;
                 vertical-align:super;
+                display: inline-block;
             }
             .add-button{
                 padding: 10px 20px 10px 20px;
@@ -62,53 +62,60 @@ will not change size when text too long-->
             .name-p{
                 font-weight: bold;
                 font-size: large;
-                display: inline-block;
             }
             .add-button{
                 cursor: pointer;
+            }
+            .cat-grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 15px;
+                row-gap: 14px;
             }
             
 
         </style>
     </head>
     <body>
-        <div class = "cat-box">
-            <div class = "thumbnail">
-                <img class = "thumbnail-img" src ="img/cat-1.webp">
-            </div>
-            <div class = "info">
-                <p class = "name-p">Beluga Cat</p>
-                <div class = "mutual">
-                    <img class = "mutual-img" src = "img/sample-1.webp">
-                    <p class = "mutual-p">2 mutual friends</p>
+        <div class = "cat-grid">
+            <div class = "cat-box">
+                <div class = "thumbnail">
+                    <img class = "thumbnail-img" src ="img/cat-1.webp">
                 </div>
-                <button class = "add-button">Add Friend</button>
-            </div>
-        </div>
-        <div class = "cat-box">
-            <div class = "thumbnail">
-                <img class = "thumbnail-img" src ="img/cat-2.jpg">
-            </div>
-            <div class = "info">
-                <p class = "name-p">Pop Cat</p>
-                <div class = "mutual">
-                    <img class = "mutual-img" src = "img/sample-1.webp">
-                    <p class = "mutual-p">3 mutual friends</p>
+                <div class = "info">
+                    <p class = "name-p">Beluga Cat</p>
+                    <div class = "mutual">
+                        <img class = "mutual-img" src = "img/sample-1.webp">
+                        <p class = "mutual-p">2 mutual friends</p>
+                    </div>
+                    <button class = "add-button">Add Friend</button>
                 </div>
-                <button class = "add-button">Add Friend</button>
             </div>
-        </div>
-        <div class = "cat-box">
-            <div class = "thumbnail">
-                <img class = "thumbnail-img" src ="img/cat-3.webp">
-            </div>
-            <div class = "info">
-                <p class = "name-p">Thousand Yard Stare Cat</p>
-                <div class = "mutual">
-                    <img class = "mutual-img" src = "img/sample-1.webp">
-                    <p class = "mutual-p">3 mutual friends</p>
+            <div class = "cat-box">
+                <div class = "thumbnail">
+                    <img class = "thumbnail-img" src ="img/cat-2.jpg">
                 </div>
-                <button class = "add-button">Add Friend</button>
+                <div class = "info">
+                    <p class = "name-p">Pop Cat</p>
+                    <div class = "mutual">
+                        <img class = "mutual-img" src = "img/sample-1.webp">
+                        <p class = "mutual-p">3 mutual friends</p>
+                    </div>
+                    <button class = "add-button">Add Friend</button>
+                </div>
+            </div>
+            <div class = "cat-box">
+                <div class = "thumbnail">
+                    <img class = "thumbnail-img" src ="img/cat-3.webp">
+                </div>
+                <div class = "info">
+                    <p class = "name-p">Thousand Yard Stare Cat</p>
+                    <div class = "mutual">
+                        <img class = "mutual-img" src = "img/sample-1.webp">
+                        <p class = "mutual-p">3 mutual friends</p>
+                    </div>
+                    <button class = "add-button">Add Friend</button>
+                </div>
             </div>
         </div>
     </body>
