@@ -1,0 +1,54 @@
+
+.thumbnail{
+    width: 100%;
+}
+
+
+.video-preview{
+    width: 100%;
+
+}
+.channel-pic{
+    display: inline-block;
+    width: 50px;
+    vertical-align: top;
+    margin-right: 6px;
+}
+.video-info{
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.youtuber{
+    width: 100%;
+    border-radius: 100px;
+    display: inline-block;
+}
+.video-title{
+    margin-top:0px;
+    font-weight: 500;
+
+}
+.video-author{
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+    margin-top: 7px;
+}
+.video-stats{
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+    margin-top: 3px;
+}
+.thumbnail{
+    margin-bottom: 12px;
+}
+.video-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 14px;
+}
