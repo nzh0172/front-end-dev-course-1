@@ -56,6 +56,11 @@ flexbox when resize window smaller - item inside flexbox will shrink : flex-shri
 Keeps header at the top of the website
 Let element on top of other element - like notif. number and video lengths on thumbnail
 
+
+16. FINISH THE PROJECT
+.sidebar-link img{ --target img in sidebar link
+    height: 40px;
+}
 -->
 
 
@@ -81,9 +86,11 @@ Let element on top of other element - like notif. number and video lengths on th
                 <input class ="search-bar" type = "text" placeholder="Search">
                 <button class = "search-button">
                     <img class = "search-icon" src = "icons/search.svg">
+                    <div class = "tooltip">Search</div>
                 </button>
                 <button class = "voice-search-button">
                     <img class = "voice-search-icon" src = "icons/voice-search-icon.svg">
+                    <div class = "tooltip">Search with your voice</div>
                 </button>
             </div>
             <div class ="right-section">
@@ -98,17 +105,43 @@ Let element on top of other element - like notif. number and video lengths on th
         </div>
 
         <div class = "sidebar">
-            
+            <div class = "sidebar-link">
+                <img class = "home" src="icons/home.svg">
+                <div>Home</div>
+            </div>
+            <div class = "sidebar-link">
+                <img class = "explore" src="icons/explore.svg">
+                <div>Explore</div>
+            </div>
+            <div class = "sidebar-link">
+                <img class = "subscriptions" src="icons/subscriptions.svg">
+                <div>Subscriptions</div>
+            </div>
+            <div class = "sidebar-link">
+                <img class = "originals" src="icons/originals.svg">
+                <div>Originals</div>
+            </div>
+            <div class = "sidebar-link">
+                <img class = "ytmusic" src="icons/youtube-music.svg">
+                <div>Youtube Music</div>
+            </div>
+            <div class = "sidebar-link">
+                <img class = "library" src="icons/library.svg">
+                <div>Library</div>
+            </div>
+
         </div>
         
         <div class ="video-grid">
             <div class="video-preview">
                 <div class = "thumbnail-row">
-                    <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
+                    <a href = "https://www.youtube.com/watch?v=n2RNcPRtAiY">
+                        <img class ="thumbnail" src= "thumbnail/thumbnail-1.webp">
+                    </a>
                     <div class = "video-time">14:20</div>
                 </div>
                 <div class = "video-info-grid">
-                    <div class = "channel-pic">
+                    <div class = "channel-pic">           
                         <img class = "youtuber" src="youtuber-icon/channel-1.webp">
                     </div>
                     <div class="video-info">

@@ -27,7 +27,7 @@
     justify-content: space-between;
 
     background-color: white;
-    box-shadow: 75px 0px 3px;
+    box-shadow: 100px 0px 3px;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -78,7 +78,7 @@
 
 .voice-search-icon{
     height: 25px;
-    margin-top: 4px;
+    
 
 }
 
@@ -95,6 +95,35 @@
     transition: background-color 0.5s;
 }
 
+.search-button, .voice-search-button{
+    /*making tooltip*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*target tooltip inside search button*/
+.search-button .tooltip, 
+.voice-search-button .tooltip{
+    position: absolute;
+    background-color: rgb(136, 136, 136);
+    color: white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    bottom: -35px;
+   
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none; /*the tooltip will not get hovered*/
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip{
+    opacity: 1;
+}
+
 .search-button:hover{
     background-color: rgba(0,0,0,0.2);
 }
@@ -106,6 +135,7 @@
     border-radius: 100px;
     border: none;
     transition: background-color 0.5s;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
 }
 
 .voice-search-button:hover{
@@ -163,3 +193,4 @@
     top: 0px;
 
 }
+
