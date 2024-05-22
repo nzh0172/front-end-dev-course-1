@@ -14,6 +14,7 @@
     flex: 1;
 }
 
+
 .search-bar::placeholder{
     font-size: 16px;
 }
@@ -24,7 +25,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    background-color: white;
+    box-shadow: 75px 0px 3px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    z-index: 100;
 }
+
 
 .left-section{
     display: flex;
@@ -111,9 +122,44 @@
 
 .notifications-icon{
     height: 30px;
+    margin-top: 6px;
 }
 
 .my-channel-icon{
     height: 40px;
     
+}
+
+.thumbnail-row{
+    position: relative;
+}
+
+.video-time{
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    bottom: 25px;
+    right: 5px;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 3px;
+    border-radius: 3px;
+}
+
+.notification-icon-container{
+    position: relative;
+}
+
+.notification-count{
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-family: roboto, arial;
+    border-radius: 100px;
+    padding: 3px 6px;
+    font-size: 13px;
+    right: -6px;
+    top: 0px;
+
 }

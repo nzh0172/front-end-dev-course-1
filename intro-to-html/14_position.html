@@ -1,0 +1,108 @@
+<!--
+position: static, fixed (always on top of elements)
+top: distance from side of window = top: 0 -available in all direction;
+    top, left, right, bottom
+
+if left==right and top==bottom: it will stretch, making the header bigger
+instead of using bottom to set our height of header, use height instead (width also applicable here)
+
+set body padding top so that it doesn't cover website content
+
+
+POSITION FIXED VS ABSOLUTE
+FIXED = placed in the BROWSER WINDOW
+ABSOLUTE = placed on the PAGE (when scroll it will follow the page)
+
+Z-INDEX: set priority of element display on top (the higher more in front) - set to 100 for many objects
+
+always on top order: <doesn't apply to static position>
+div1
+div2
+div3
+div4 -- TOP
+
+when position absolute inside position fixed = can attach an element inside an element ON THE PAGE, like notification number
+when position absolute inside position relative = can attach an element inside an element ON THE ELEMENT, like video duration
+
+can't put sth on image - use div container instead
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position practice</title>
+    </head>
+    <body style = "height: 3000px; padding-top: 60px; padding-left: 100px;">
+        <div style = "
+        background-color: black;
+        color: white;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top:0px;
+        height: 50px;
+        z-index: 100;
+  
+            ">header</div>
+
+        <div style = "
+        background-color: pink;
+        position: fixed;
+        left: 0px;
+        top: 50px;
+        bottom: 0;
+        width: 70px;
+        
+        ">
+            sidebar
+        </div>
+
+        <div style="
+        position: absolute;
+        background-color: red;
+        color: white;
+
+        right: 10px;
+        top: 10px;
+
+        ">
+            absolute
+        </div>
+
+        <div style = 
+        "background-color: lightblue; 
+        height: 200px; 
+        width: 200px;
+        position: static;">div 1</div>
+
+        <div style = 
+        "background-color: lightpink; 
+        height: 200px; 
+        width: 200px;
+        position: static;">div 2</div>
+
+        <div style = 
+        "background-color: lightblue; 
+        height: 200px; 
+        width: 200px;
+        position: relative;">
+            div 3
+            <div style = 
+            "background-color: black;
+            color: white; 
+            position: absolute;
+            bottom: 10px;
+            right: 10px">
+            5:00
+            </div>
+        </div>
+
+        <div style = 
+        "background-color: lightpink; 
+        height: 200px; 
+        width: 200px;
+        position: static;">div 4</div>
+    </body>
+</html>

@@ -7,4 +7,6 @@ p{
 
 body{
     margin: 0;
+    padding-left: 100px;
+    background-color: rgb(245, 245, 245);
 }
